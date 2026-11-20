@@ -70,7 +70,7 @@ token: glpat-xxxx
 ignore_ssl: true
 concurrency: 25
 retry_count: 5
-groups: pcp,billing        # search only in these groups
+groups: mygroup,billing        # search only in these groups
 extension: yaml            # only *.yaml
 output: found.txt          # write to a file
 quiet: true                # ...and do not duplicate it on the console
@@ -158,7 +158,7 @@ config:    C:\work\.gitlab-search.yaml
 api:       https://git.mycorp.ru/api/v4
 token:     glp*******************abc
 tls:       certificate checks SKIPPED (--ignore-ssl)
-groups:    pcp,billing
+groups:    mygroup,billing
 filters:   extension=yaml  path=roles  archive=all
 output:    console and file found.txt (plain)
 limits:    concurrency=25 rate_limit=0/s retry_count=5 (5s, 15s, 30s, 45s, 60s) log_level=info
@@ -182,7 +182,7 @@ matches:   57
 time:      4m3s
 results:   console and file found.txt (plain)
 citations (57):
-  https://git.mycorp.ru/pcp/billing/blob/master/roles/app/values.yaml#L18
+  https://git.mycorp.ru/mygroup/billing/blob/master/roles/app/values.yaml#L18
       here-is-my-search-term: true
   ...
 ```
