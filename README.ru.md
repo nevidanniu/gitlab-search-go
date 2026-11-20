@@ -2,9 +2,7 @@
 
 [English](README.md) · Русский
 
-Поиск строки в коде всех проектов GitLab-групп — Go-реализация npm-пакета
-[gitlab-search](.source_data/gitlab-search) с расчётом на собственный (on-premise) GitLab
-и защитой от ошибок `429 Too Many Requests`, из-за которых оригинал падал с «Something exploded!».
+Поиск строки в коде всех проектов GitLab-групп
 
 ## Сборка
 

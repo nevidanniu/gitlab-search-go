@@ -2,10 +2,7 @@
 
 [English](README.md) · [Русский](README.ru.md)
 
-Search a string across the code of every project in your GitLab groups — a Go
-implementation of the npm package [gitlab-search](.source_data/gitlab-search), aimed at
-self-hosted (on-premise) GitLab and hardened against the `429 Too Many Requests` errors
-that made the original die with "Something exploded!".
+Search a string across the code of every project in your GitLab groups
 
 ## Build
 
