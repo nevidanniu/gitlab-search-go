@@ -1,0 +1,6 @@
+.idea
+.build
+.gitlab-search-tmp
+.source_data
+*.txt
+*.yaml
