@@ -14,7 +14,7 @@ go build -o .build\bin\gitlab-search.exe .\cmd\gitlab-search
 
 ```powershell
 # once: create the configuration for your internal GitLab
-gitlab-search setup --token <personal-access-token> --base-url https://git.digital.rt.ru --ignore-ssl
+gitlab-search setup --token <personal-access-token> --base-url https://git.mycorp.ru --ignore-ssl
 # the token needs the read_api scope
 
 # search
@@ -30,7 +30,7 @@ from it stops at the required-parameter check and reports where a token can be t
 The server and the token can also be given per run, without any configuration file:
 
 ```powershell
-gitlab-search --base-url https://git.digital.rt.ru --token <pat> "term"
+gitlab-search --base-url https://git.mycorp.ru --token <pat> "term"
 ```
 
 ## Configuration
@@ -65,7 +65,7 @@ whenever the matching flag is not given explicitly:
 | `quiet` | `false` | `--quiet` | do not print results to the console (requires `output`) |
 
 ```yaml
-domain: https://git.digital.rt.ru
+domain: https://git.mycorp.ru
 token: glpat-xxxx
 ignore_ssl: true
 concurrency: 25
@@ -155,7 +155,7 @@ Before the first request, the block shows the values actually applied after reso
 version:   1.0.0
 term:      "here-is-my-search-term"
 config:    C:\work\.gitlab-search.yaml
-api:       https://git.digital.rt.ru/api/v4
+api:       https://git.mycorp.ru/api/v4
 token:     glp*******************abc
 tls:       certificate checks SKIPPED (--ignore-ssl)
 groups:    pcp,billing
@@ -182,7 +182,7 @@ matches:   57
 time:      4m3s
 results:   console and file found.txt (plain)
 citations (57):
-  https://git.digital.rt.ru/pcp/billing/blob/master/roles/app/values.yaml#L18
+  https://git.mycorp.ru/pcp/billing/blob/master/roles/app/values.yaml#L18
       here-is-my-search-term: true
   ...
 ```

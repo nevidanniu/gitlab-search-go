@@ -14,7 +14,7 @@ go build -o .build\bin\gitlab-search.exe .\cmd\gitlab-search
 
 ```powershell
 # один раз: создать конфиг для внутреннего GitLab
-gitlab-search setup --token <personal-access-token> --base-url https://git.digital.rt.ru --ignore-ssl
+gitlab-search setup --token <personal-access-token> --base-url https://git.mycorp.ru --ignore-ssl
 # токен должен иметь область read_api
 
 # поиск
@@ -30,7 +30,7 @@ gitlab-search "term" -g my-group -f "*.go" -p services/
 Можно и без конфиг-файла, указав сервер и токен флагами:
 
 ```powershell
-gitlab-search --base-url https://git.digital.rt.ru --token <pat> "term"
+gitlab-search --base-url https://git.mycorp.ru --token <pat> "term"
 ```
 
 ## Конфигурация
@@ -65,7 +65,7 @@ gitlab-search --base-url https://git.digital.rt.ru --token <pat> "term"
 | `quiet` | `false` | `--quiet` | не печатать результаты в консоль (нужен `output`) |
 
 ```yaml
-domain: https://git.digital.rt.ru
+domain: https://git.mycorp.ru
 token: glpat-xxxx
 ignore_ssl: true
 concurrency: 25
@@ -153,7 +153,7 @@ quiet: true                # ...и не дублировать в консоль
 version:   1.0.0
 term:      "here-is-my-search-term"
 config:    C:\work\.gitlab-search.yaml
-api:       https://git.digital.rt.ru/api/v4
+api:       https://git.mycorp.ru/api/v4
 token:     glp*******************abc
 tls:       certificate checks SKIPPED (--ignore-ssl)
 groups:    pcp,billing
@@ -179,7 +179,7 @@ matches:   57
 time:      4m3s
 results:   console and file found.txt (plain)
 citations (57):
-  https://git.digital.rt.ru/pcp/billing/blob/master/roles/app/values.yaml#L18
+  https://git.mycorp.ru/pcp/billing/blob/master/roles/app/values.yaml#L18
       here-is-my-search-term: true
   ...
 ```
